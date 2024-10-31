@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure container takes full height */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto; /* Center grid horizontally */
+    justify-content: center; /* Center grid horizontally within container */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+#status, #winnerStatus {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.winner-message {
+    margin-top: 20px;
+    font-size: 2.5em; /* Bigger font size for winner message */
+    margin-bottom: 30px; /* Space between message and buttons */
+}
+
+button {
+    width: 200px;  /* Adjust width for bigger buttons */
+    height: 50px;  /* Adjust height for bigger buttons */
+    background-color: purple; /* Purple color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.5em; /* Bigger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 10px; /* Margin around buttons */
+}
+
+button:hover {
+    background-color: darkviolet; /* Darker shade on hover */
+}
+
+/* Centering the game and winner pages */
+#gamePage, #winnerPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height for centering */
+}
+
+#gamePage {
+    flex-grow: 1; /* Allow game page to grow and fill the space */
+}
+
+#winnerPage {
+    flex-grow: 1; /* Allow winner page to grow and fill the space */
+}
